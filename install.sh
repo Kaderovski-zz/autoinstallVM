@@ -140,7 +140,7 @@ apt-get update
 
 # Installing Webmin
 echo "\n \n****Installing Webmin...****\n"
-apt-get -y install webmin
+apt-get -y install webmin --force-yes
 
 # ---------- 
 # ----------
