@@ -150,6 +150,6 @@ apt-get -y install webmin --force-yes
 # ----------
 # Installing utils
 echo "\n \n****installing used paquet...****\n"
-apt-get -y install vim whois dnsutils nmap curl wget iftop
+apt-get -y install vim whois dnsutils nmap curl wget iftop htop tcpdump
 
 echo "\n \n \n ********** Don't forget to thanks Corentin ! ********** \n "
