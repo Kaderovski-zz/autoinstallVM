@@ -17,6 +17,9 @@
 # - FTP
 # - fail2ban
 # - Webmin
+# 
+#
+# Install Letsencrypt
 
 
 
@@ -116,6 +119,9 @@ apt-get -y install mysql-server mysql-server
 echo "\n \n****Installing Apache2...****\n"
 apt-get -y install phpmyadmin
 
+
+
+
 # Safety restarting services
 echo "\n \n****restarting services...****\n"
 /etc/init.d/apache2 restart
@@ -150,6 +156,25 @@ apt-get -y install webmin --force-yes
 # ----------
 # Installing utils
 echo "\n \n****installing used paquet...****\n"
-apt-get -y install vim whois dnsutils nmap curl wget iftop htop tcpdump
+apt-get -y install vim whois dnsutils nmap curl wget iftop git
+# ---------- 
+# ----------
+
+
+
+
+
+# ---------- 
+# ----------
+# Installing Lets Encrypt
+echo "\n \n****installing Letsencrypt...****\n"
+git clone https://github.com/letsencrypt/letsencrypt
+cd letsencrypt
+./letsencrypt-auto
+echo "\n\n To use letsencrypt please go to /letsencrypt folder and type : letsencrypt --apache"
+# ---------- 
+# ----------
+
+
 
 echo "\n \n \n ********** Don't forget to thanks Corentin ! ********** \n "
