@@ -171,6 +171,7 @@ echo "\n \n****installing Letsencrypt...****\n"
 git clone https://github.com/letsencrypt/letsencrypt
 cd letsencrypt
 ./letsencrypt-auto
+cd /
 echo "\n\n To use letsencrypt please go to /letsencrypt folder and type : letsencrypt --apache"
 # ---------- 
 # ----------
@@ -179,4 +180,4 @@ echo "\n\n To use letsencrypt please go to /letsencrypt folder and type : letsen
 
 echo "\n \n \n ********** Don't forget to thanks Corentin ! ********** \n "
 echo "********** What you have to do : Modify your jail.conf ********** \n "
-echo "********** What you have to do : Create your website and do : cd letsencrypt ; letsencrypt --apache  ********** \n "
+echo "********** What you have to do : Create your website and do : cd letsencrypt ; ./letsencrypt-auto  ********** \n "
