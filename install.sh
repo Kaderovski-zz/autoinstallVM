@@ -91,9 +91,10 @@ cat /etc/ssh/sshd_config | grep Port
 # Installing fail2ban
 echo "\n \n****Installing fail2ban...****\n"
 apt-get -y install fail2ban
-
-echo "****Please configure jail.conf...****\n"
-
+echo "****Changing with you $SSHPORT...****\n"
+sed -i 's/ssh/$SSH_PORT/g' /etc/init.d/jail.conf   
+echo "****Restarting Fail2ban...****\n"
+/etc/init.d/fail2ban restart
 # ---------- 
 # ----------
 
